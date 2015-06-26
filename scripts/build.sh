@@ -39,6 +39,9 @@ do
         rm -Rf nwjs-$NW_VERSION-$platform
     fi
 
+    # Currectly, this pet project can not generate single exe
+    # (maybe a lot of nested node_modules)
+    # SO, you must place nw.exe and dll file into the app/* directory same as package.json level
     if [ $platform == win-ia32 ]; then
         cat app-$platform/nw.exe app.nw > app-$platform/grou.exe
         rm app-$platform/nwjc.exe
