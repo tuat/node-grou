@@ -12,6 +12,7 @@ cp -Rf package.json build/app
 # > make sure package.json in the root directory
 cd build/app
 npm install --production
+find . -type f -name "*~*" -exec rm -rf {} \;
 zip -r ../app.nw *
 cd ../..
 
@@ -38,7 +39,7 @@ do
     fi
 
     if [ $platform == win-ia32 ]; then
-        cat app-$platform/nw.exe app.nw > app-$platform/grou.exe
+        cat app-$platform/nw.exe app.nw > app-$platform/fires.exe
         rm app-$platform/nwjc.exe
         rm app-$platform/d3dcompiler_47.dll
         rm app-$platform/pdf.dll
@@ -48,7 +49,7 @@ do
         rm app-$platform/nw.exe
         rm -Rf app-$platform/credits.html
         rm -Rf app-$platform/locales
-        chmod 755 app-$platform/grou.exe
+        chmod 755 app-$platform/fires.exe
     fi
 
     if [ $platform == osx-ia32 ]; then
@@ -59,6 +60,6 @@ do
         cp ../scripts/*.icns app-$platform/nwjs.app/Contents/Resources/
         /usr/libexec/PlistBuddy -c "Set CFBundleVersion $1" app-$platform/nwjs.app/Contents/Info.plist
         /usr/libexec/PlistBuddy -c "Set CFBundleShortVersionString $1" app-$platform/nwjs.app/Contents/Info.plist
-        mv app-$platform/nwjs.app app-$platform/grou.app
+        mv app-$platform/nwjs.app app-$platform/fires.app
     fi
 done

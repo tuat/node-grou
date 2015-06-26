@@ -17,9 +17,9 @@
   },
   "js-flags": "--expose-gc",
   "dependencies": {
-    "googleapis": "^2.0.5",
+    "cheerio": "^0.19.0",
     "request": "^2.58.0",
-    "cheerio": "^0.19.0"
+    "googleapis": "^2.0.5"
   },
   "devDependencies": {
     "bower": "^1.4.1",
