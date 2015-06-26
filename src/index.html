@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grou</title>
+<!-- build:css assets/css/app.css -->
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet" >
+<link href="assets/css/app.css" rel="stylesheet">
+<!-- endbuild -->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            -->
+            <a class="navbar-brand" href="#">Grou</a>
+        </div>
+        <!--
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Home</a></li>
+            </ul>
+        </div>
+        -->
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">Information</div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="media-link">Media Link</label>
+                    <input type="text" class="form-control media-link" id="media-link" placeholder="Media Link">
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-xs-5">
+                    <input type="text" class="form-control auth-code" id="media-link" placeholder="Auth Code">
+                </div>
+                <div class="col-xs-7 text-right">
+                    <button type="button" class="btn btn-info auth">Auth</button>
+                    <button type="button" class="btn btn-success access">Access</button>
+                    <button type="button" class="btn btn-default generate">Generate</button>
+                    <button type="button" class="btn btn-danger clear">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Result Text</div>
+        <div class="panel-body">
+            <textarea class="form-control result-text" rows="4"></textarea>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Settings
+            <a class="pull-right update">Update</a>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="image-download-directory" class="col-sm-2 control-label">Download directory</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control download-directory" id="download-directory" placeholder="Directory Path">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="text-muted">
+                <small class="status">Watting ...</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<!-- build:js assets/js/app.js -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

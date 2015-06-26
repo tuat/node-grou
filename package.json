@@ -1,0 +1,35 @@
+{
+  "name": "Grou",
+  "version": "0.1.0",
+  "single-instance": true,
+  "main": "dist/index.html",
+  "window": {
+    "title": "Grou",
+    "icon": "dist/assets/img/icon.png",
+    "toolbar": false,
+    "width": 750,
+    "height": 680,
+    "position": "mouse",
+    "min_width": 650,
+    "min_height": 600,
+    "max_width": 650,
+    "max_height": 600
+  },
+  "js-flags": "--expose-gc",
+  "dependencies": {
+    "googleapis": "^2.0.5",
+    "request": "^2.58.0",
+    "cheerio": "^0.19.0"
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-replace": "^0.5.3",
+    "gulp-rev": "^5.0.0",
+    "gulp-sequence": "^0.3.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-usemin": "^0.3.11"
+  }
+}
